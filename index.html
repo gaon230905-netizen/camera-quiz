@@ -28,8 +28,8 @@
             <h1 class="text-2xl font-black tracking-tight mb-4">초상권 지킴이 활동지</h1>
             
             <div class="bg-white/15 backdrop-blur-md rounded-xl p-3 flex items-center justify-between border border-white/20">
-                <span class="text-sm font-bold text-indigo-100">이름:</span>
-                <input type="text" id="student-name" placeholder="이름을 입력하세요" class="bg-white/90 text-slate-900 placeholder-slate-400 font-bold px-3 py-1.5 rounded-lg text-sm w-44 text-center focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                <span class="text-base font-bold text-indigo-100">이름:</span>
+                <input type="text" id="student-name" placeholder="이름을 입력하세요" class="bg-white/90 text-slate-900 placeholder-slate-400 font-bold px-3 py-1.5 rounded-lg text-base w-48 text-center focus:outline-none focus:ring-2 focus:ring-indigo-400">
             </div>
         </header>
 
@@ -49,10 +49,10 @@
 
                 <!-- Callout Box with Blue Accent Border -->
                 <div class="bg-blue-50/70 border-l-4 border-indigo-600 rounded-r-2xl p-4 shadow-sm space-y-1.5">
-                    <h3 class="text-base font-extrabold text-indigo-900">
+                    <h3 class="text-lg font-extrabold text-indigo-900">
                         초상권이란?
                     </h3>
-                    <p class="text-base font-semibold text-slate-800 leading-relaxed">
+                    <p class="text-lg font-semibold text-slate-800 leading-relaxed">
                         내 얼굴이나 모습을 다른 사람이 마음대로 찍거나 사용하지 못하게 할 권리입니다.
                     </p>
                 </div>
@@ -64,48 +64,48 @@
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                         ✍️ 1. O/X 퀴즈
                     </h2>
-                    <p class="text-slate-500 text-sm mt-0.5">문장을 읽고 맞으면 O, 틀리면 X를 터치해 주세요.</p>
+                    <p class="text-slate-600 text-base mt-0.5 font-medium">문장을 읽고 맞으면 O, 틀리면 X를 터치해 주세요.</p>
                 </div>
 
                 <div id="quiz-list" class="space-y-5">
                     <!-- Quiz Item 1 -->
                     <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 quiz-item" data-answer="X">
-                        <p class="font-bold text-slate-900 text-base mb-3 leading-snug">1) 나는 친한 친구의 사진을 내 마음대로 찍어서 올려도 된다.</p>
+                        <p class="font-bold text-slate-900 text-lg mb-3 leading-snug">1) 나는 친한 친구의 사진을 내 마음대로 찍어서 올려도 된다.</p>
                         <div class="flex gap-3">
                             <button onclick="answerQuiz(this, 'O')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">O</button>
                             <button onclick="answerQuiz(this, 'X')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">X</button>
                         </div>
-                        <div class="quiz-feedback mt-2 text-sm font-bold hidden px-3 py-2 rounded-xl text-center"></div>
+                        <div class="quiz-feedback mt-2 text-base font-bold hidden px-3 py-2 rounded-xl text-center"></div>
                     </div>
 
                     <!-- Quiz Item 2 -->
                     <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 quiz-item" data-answer="O">
-                        <p class="font-bold text-slate-900 text-base mb-3 leading-snug">2) 나는 누가 내 사진을 허락 없이 찍으면 찍지 말라고 말할 수 있다.</p>
+                        <p class="font-bold text-slate-900 text-lg mb-3 leading-snug">2) 나는 누가 내 사진을 허락 없이 찍으면 찍지 말라고 말할 수 있다.</p>
                         <div class="flex gap-3">
                             <button onclick="answerQuiz(this, 'O')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">O</button>
                             <button onclick="answerQuiz(this, 'X')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">X</button>
                         </div>
-                        <div class="quiz-feedback mt-2 text-sm font-bold hidden px-3 py-2 rounded-xl text-center"></div>
+                        <div class="quiz-feedback mt-2 text-base font-bold hidden px-3 py-2 rounded-xl text-center"></div>
                     </div>
 
                     <!-- Quiz Item 3 -->
                     <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 quiz-item" data-answer="X">
-                        <p class="font-bold text-slate-900 text-base mb-3 leading-snug">3) 친구 얼굴이 나온 사진을 채팅방에 장난으로 공유해도 된다.</p>
+                        <p class="font-bold text-slate-900 text-lg mb-3 leading-snug">3) 친구 얼굴이 나온 사진을 채팅방에 장난으로 공유해도 된다.</p>
                         <div class="flex gap-3">
                             <button onclick="answerQuiz(this, 'O')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">O</button>
                             <button onclick="answerQuiz(this, 'X')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">X</button>
                         </div>
-                        <div class="quiz-feedback mt-2 text-sm font-bold hidden px-3 py-2 rounded-xl text-center"></div>
+                        <div class="quiz-feedback mt-2 text-base font-bold hidden px-3 py-2 rounded-xl text-center"></div>
                     </div>
 
                     <!-- Quiz Item 4 -->
                     <div class="p-4 rounded-2xl border border-slate-200 bg-slate-50/70 quiz-item" data-answer="O">
-                        <p class="font-bold text-slate-900 text-base mb-3 leading-snug">4) 밖에서 사진을 찍을 때는 모르는 사람의 얼굴이 나오지 않게 주의해야 한다.</p>
+                        <p class="font-bold text-slate-900 text-lg mb-3 leading-snug">4) 밖에서 사진을 찍을 때는 모르는 사람의 얼굴이 나오지 않게 주의해야 한다.</p>
                         <div class="flex gap-3">
                             <button onclick="answerQuiz(this, 'O')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">O</button>
                             <button onclick="answerQuiz(this, 'X')" class="quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm">X</button>
                         </div>
-                        <div class="quiz-feedback mt-2 text-sm font-bold hidden px-3 py-2 rounded-xl text-center"></div>
+                        <div class="quiz-feedback mt-2 text-base font-bold hidden px-3 py-2 rounded-xl text-center"></div>
                     </div>
                 </div>
             </section>
@@ -116,55 +116,55 @@
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                         📱 2. SNS 사진 선택 활동
                     </h2>
-                    <p class="text-slate-600 text-sm font-semibold mt-0.5">초상권을 잘 지킨 SNS 사진을 2개 선택해 주세요</p>
+                    <p class="text-slate-700 text-base font-bold mt-0.5">초상권을 잘 지킨 SNS 사진을 2개 선택해 주세요</p>
                 </div>
 
                 <div class="space-y-4" id="sns-container">
-                    <!-- SNS Card 1 (Correct: Mosaic Café sign) -->
+                    <!-- SNS Card 1 -->
                     <div onclick="toggleSnsCard(this)" data-correct="true" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
-                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
+                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-base font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
                             <img src="image04.png" alt="모자이크 카페 사진" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/ffffff?text=%EB%AA%A8%EC%9E%90%EC%9D%B4%ED%81%AC+%EC%B9%B4%ED%8E%98+%EC%82%AC%EC%A7%84';">
                         </div>
-                        <p class="text-xs font-bold text-slate-400">chococookie_</p>
-                        <p class="text-sm font-medium text-slate-800 mt-1">"동네 예쁜 카페 간판 사진. 모르는 사람은 모자이크 처리함!"</p>
-                        <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
+                        <p class="text-sm font-bold text-slate-500">chococookie_</p>
+                        <p class="text-base font-medium text-slate-900 mt-1">"동네 예쁜 카페 간판 사진. 모르는 사람은 모자이크 처리함!"</p>
+                        <div class="sns-item-feedback mt-2 text-sm font-bold hidden p-2.5 rounded-lg text-center"></div>
                     </div>
 
-                    <!-- SNS Card 2 (Incorrect: Friend ordering/walking from behind without consent) -->
+                    <!-- SNS Card 2 -->
                     <div onclick="toggleSnsCard(this)" data-correct="false" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
-                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
+                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-base font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
                             <img src="image05.png" alt="주문하는 친구 사진" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%A3%BC%EB%AC%B8%ED%95%98%EB%8A%94+%EC%B9%9C%EA%B5%AC+%EC%82%AC%EC%A7%84';">
                         </div>
-                        <p class="text-xs font-bold text-slate-400">chococookie_</p>
-                        <p class="text-sm font-medium text-slate-800 mt-1">"커피 주문하러 가는 친구~ 얼굴이 그대로 다 찍혔다."</p>
-                        <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
+                        <p class="text-sm font-bold text-slate-500">chococookie_</p>
+                        <p class="text-base font-medium text-slate-900 mt-1">"커피 주문하러 가는 친구~ 얼굴이 그대로 다 찍혔다."</p>
+                        <div class="sns-item-feedback mt-2 text-sm font-bold hidden p-2.5 rounded-lg text-center"></div>
                     </div>
 
-                    <!-- SNS Card 3 (Correct: Selfie with Haejin with mutual agreement) -->
+                    <!-- SNS Card 3 -->
                     <div onclick="toggleSnsCard(this)" data-correct="true" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
-                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
+                        <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-base font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
                             <img src="image06.png" alt="친구와 찍은 셀카" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%B9%9C%EA%B5%AC%EC%99%80+%EC%B0%8D%EC%9D%80+%EC%85%80%EC%B9%B4';">
                         </div>
-                        <p class="text-xs font-bold text-slate-400">chococookie_</p>
-                        <p class="text-sm font-medium text-slate-800 mt-1">"해진이랑 같이 찍은 사진! 미리 허락받고 올림."</p>
-                        <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
+                        <p class="text-sm font-bold text-slate-500">chococookie_</p>
+                        <p class="text-base font-medium text-slate-900 mt-1">"해진이랑 같이 찍은 사진! 미리 허락받고 올림."</p>
+                        <div class="sns-item-feedback mt-2 text-sm font-bold hidden p-2.5 rounded-lg text-center"></div>
                     </div>
                 </div>
             </section>
 
         </main>
 
-        <footer class="p-4 bg-white border-t border-slate-100 text-center text-xs text-slate-400">
+        <footer class="p-4 bg-white border-t border-slate-100 text-center text-sm text-slate-500">
             초상권 지킴이 스마트 학습지 © 2026
         </footer>
 
     </div>
 
     <script>
-        // O/X Quiz Answer Logic with real-time feedback and temporary red auto-reset
+        // O/X Quiz Answer Logic
         function answerQuiz(button, selected) {
             const quizItem = button.closest('.quiz-item');
             const correctAnswer = quizItem.getAttribute('data-answer');
@@ -179,14 +179,13 @@
 
             if (selected === correctAnswer) {
                 button.className = "quiz-btn flex-1 py-5 bg-blue-600 border-2 border-blue-600 rounded-2xl text-3xl font-black text-white shadow-md";
-                feedback.className = "quiz-feedback mt-2 text-sm font-bold bg-blue-50 text-blue-700 border border-blue-200 px-3 py-2 rounded-xl text-center block";
+                feedback.className = "quiz-feedback mt-2 text-base font-bold bg-blue-50 text-blue-700 border border-blue-200 px-3 py-2 rounded-xl text-center block";
                 feedback.textContent = "🎉 정답입니다! 아주 잘했어요!";
             } else {
                 button.className = "quiz-btn flex-1 py-5 bg-rose-500 border-2 border-rose-500 rounded-2xl text-3xl font-black text-white shadow-md";
-                feedback.className = "quiz-feedback mt-2 text-sm font-bold bg-rose-50 text-rose-700 border border-rose-200 px-3 py-2 rounded-xl text-center block";
+                feedback.className = "quiz-feedback mt-2 text-base font-bold bg-rose-50 text-rose-700 border border-rose-200 px-3 py-2 rounded-xl text-center block";
                 feedback.textContent = "❌ 정답이 아닙니다. 다시 생각해볼까요?";
                 
-                // Auto-disappear incorrect state after 1.2 seconds
                 setTimeout(() => {
                     button.className = "quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm";
                     feedback.classList.add('hidden');
@@ -194,7 +193,7 @@
             }
         }
 
-        // SNS Card Toggle Logic with persistent blue for correct and auto-deselecting red for incorrect
+        // SNS Card Toggle Logic
         function toggleSnsCard(card) {
             const isCorrect = card.getAttribute('data-correct') === 'true';
             const isSelected = card.classList.contains('border-blue-600');
@@ -202,14 +201,13 @@
             const itemFeedback = card.querySelector('.sns-item-feedback');
 
             if (isCorrect) {
-                // Correct selection: Toggle persistent blue state
                 if (!isSelected) {
                     card.classList.remove('border-slate-200');
                     card.classList.add('border-blue-600', 'bg-blue-50/20', 'ring-2', 'ring-blue-200');
                     badge.classList.remove('border-slate-300', 'text-slate-400');
                     badge.classList.add('bg-blue-600', 'text-white', 'border-blue-600', 'selected-badge');
                     
-                    itemFeedback.className = "sns-item-feedback mt-2 text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 p-2 rounded-lg text-center block";
+                    itemFeedback.className = "sns-item-feedback mt-2 text-sm font-bold bg-blue-50 text-blue-700 border border-blue-200 p-2.5 rounded-lg text-center block";
                     itemFeedback.textContent = "✨ 정답입니다! 초상권을 지킨 올바른 사진이에요.";
                 } else {
                     card.classList.remove('border-blue-600', 'bg-blue-50/20', 'ring-2', 'ring-blue-200');
@@ -219,13 +217,12 @@
                     itemFeedback.classList.add('hidden');
                 }
             } else {
-                // Incorrect selection: Temporary red feedback that automatically disappears
                 card.classList.remove('border-slate-200');
                 card.classList.add('border-rose-500', 'bg-rose-50/20', 'ring-2', 'ring-rose-200');
                 badge.classList.remove('border-slate-300', 'text-slate-400');
                 badge.classList.add('bg-rose-500', 'text-white', 'border-rose-500', 'selected-badge');
 
-                itemFeedback.className = "sns-item-feedback mt-2 text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200 p-2 rounded-lg text-center block";
+                itemFeedback.className = "sns-item-feedback mt-2 text-sm font-bold bg-rose-50 text-rose-700 border border-rose-200 p-2.5 rounded-lg text-center block";
                 itemFeedback.textContent = "⚠️ 타인의 얼굴이 무단으로 노출되어 초상권 침해 우려가 있어요!";
 
                 setTimeout(() => {
