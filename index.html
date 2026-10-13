@@ -10,6 +10,7 @@
             transform: scale(1.15);
             transition: all 0.2s ease-in-out;
         }
+        /* Custom smooth transitions */
         .quiz-btn, .sns-card {
             transition: all 0.2s ease-in-out;
         }
@@ -41,10 +42,12 @@
                     📖 초상권 확인하기
                 </h2>
                 
+                <!-- Main Illustration Image Block -->
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-2 shadow-sm overflow-hidden flex justify-center items-center">
                     <img src="image02.png" alt="초상권 알아보기 - 사진 찍지 마세요, 지워주세요" class="w-full h-auto rounded-xl object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=%EC%82%AC%EC%A7%84+%EC%B0%8D%EC%A7%80+%EB%A7%88%EC%84%B8%EC%9A%94+%EC%A7%80%EC%9B%8C%EC%A3%BC%EC%84%B8%EC%9A%94';">
                 </div>
 
+                <!-- Callout Box with Blue Accent Border -->
                 <div class="bg-blue-50/70 border-l-4 border-indigo-600 rounded-r-2xl p-4 shadow-sm space-y-1.5">
                     <h3 class="text-base font-extrabold text-indigo-900">
                         초상권이란?
@@ -117,7 +120,7 @@
                 </div>
 
                 <div class="space-y-4" id="sns-container">
-                    <!-- SNS Card 1 -->
+                    <!-- SNS Card 1 (Correct: Mosaic Café sign) -->
                     <div onclick="toggleSnsCard(this)" data-correct="true" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
                         <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
@@ -128,7 +131,7 @@
                         <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
                     </div>
 
-                    <!-- SNS Card 2 -->
+                    <!-- SNS Card 2 (Incorrect: Friend ordering/walking from behind without consent) -->
                     <div onclick="toggleSnsCard(this)" data-correct="false" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
                         <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
@@ -139,7 +142,7 @@
                         <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
                     </div>
 
-                    <!-- SNS Card 3 -->
+                    <!-- SNS Card 3 (Correct: Selfie with Haejin with mutual agreement) -->
                     <div onclick="toggleSnsCard(this)" data-correct="true" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
                         <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
@@ -149,13 +152,6 @@
                         <p class="text-sm font-medium text-slate-800 mt-1">"해진이랑 같이 찍은 사진! 미리 허락받고 올림."</p>
                         <div class="sns-item-feedback mt-2 text-xs font-bold hidden p-2 rounded-lg text-center"></div>
                     </div>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="pt-4">
-                    <button onclick="submitQuiz()" class="w-full py-4 bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-bold rounded-2xl shadow-lg transition duration-200 text-lg flex items-center justify-center gap-2">
-                        📊 결과 제출하기
-                    </button>
                 </div>
             </section>
 
@@ -168,15 +164,12 @@
     </div>
 
     <script>
-        // O/X Quiz Answer Logic
+        // O/X Quiz Answer Logic with real-time feedback and temporary red auto-reset
         function answerQuiz(button, selected) {
             const quizItem = button.closest('.quiz-item');
             const correctAnswer = quizItem.getAttribute('data-answer');
             const feedback = quizItem.querySelector('.quiz-feedback');
             const buttons = quizItem.querySelectorAll('button');
-
-            // Save user answer in attribute for submission
-            quizItem.setAttribute('data-user-answer', selected);
 
             buttons.forEach(btn => {
                 btn.className = "quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm";
@@ -193,4 +186,57 @@
                 feedback.className = "quiz-feedback mt-2 text-sm font-bold bg-rose-50 text-rose-700 border border-rose-200 px-3 py-2 rounded-xl text-center block";
                 feedback.textContent = "❌ 정답이 아닙니다. 다시 생각해볼까요?";
                 
-                setTimeout
+                // Auto-disappear incorrect state after 1.2 seconds
+                setTimeout(() => {
+                    button.className = "quiz-btn flex-1 py-5 bg-white border-2 border-slate-300 rounded-2xl text-3xl font-black text-slate-700 active:scale-95 shadow-sm";
+                    feedback.classList.add('hidden');
+                }, 1200);
+            }
+        }
+
+        // SNS Card Toggle Logic with persistent blue for correct and auto-deselecting red for incorrect
+        function toggleSnsCard(card) {
+            const isCorrect = card.getAttribute('data-correct') === 'true';
+            const isSelected = card.classList.contains('border-blue-600');
+            const badge = card.querySelector('.check-badge');
+            const itemFeedback = card.querySelector('.sns-item-feedback');
+
+            if (isCorrect) {
+                // Correct selection: Toggle persistent blue state
+                if (!isSelected) {
+                    card.classList.remove('border-slate-200');
+                    card.classList.add('border-blue-600', 'bg-blue-50/20', 'ring-2', 'ring-blue-200');
+                    badge.classList.remove('border-slate-300', 'text-slate-400');
+                    badge.classList.add('bg-blue-600', 'text-white', 'border-blue-600', 'selected-badge');
+                    
+                    itemFeedback.className = "sns-item-feedback mt-2 text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200 p-2 rounded-lg text-center block";
+                    itemFeedback.textContent = "✨ 정답입니다! 초상권을 지킨 올바른 사진이에요.";
+                } else {
+                    card.classList.remove('border-blue-600', 'bg-blue-50/20', 'ring-2', 'ring-blue-200');
+                    card.classList.add('border-slate-200');
+                    badge.classList.add('border-slate-300', 'text-slate-400');
+                    badge.classList.remove('bg-blue-600', 'text-white', 'border-blue-600', 'selected-badge');
+                    itemFeedback.classList.add('hidden');
+                }
+            } else {
+                // Incorrect selection: Temporary red feedback that automatically disappears
+                card.classList.remove('border-slate-200');
+                card.classList.add('border-rose-500', 'bg-rose-50/20', 'ring-2', 'ring-rose-200');
+                badge.classList.remove('border-slate-300', 'text-slate-400');
+                badge.classList.add('bg-rose-500', 'text-white', 'border-rose-500', 'selected-badge');
+
+                itemFeedback.className = "sns-item-feedback mt-2 text-xs font-bold bg-rose-50 text-rose-700 border border-rose-200 p-2 rounded-lg text-center block";
+                itemFeedback.textContent = "⚠️ 타인의 얼굴이 무단으로 노출되어 초상권 침해 우려가 있어요!";
+
+                setTimeout(() => {
+                    card.classList.remove('border-rose-500', 'bg-rose-50/20', 'ring-2', 'ring-rose-200');
+                    card.classList.add('border-slate-200');
+                    badge.classList.add('border-slate-300', 'text-slate-400');
+                    badge.classList.remove('bg-rose-500', 'text-white', 'border-rose-500', 'selected-badge');
+                    itemFeedback.classList.add('hidden');
+                }, 1200);
+            }
+        }
+    </script>
+</body>
+</html>
