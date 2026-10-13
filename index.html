@@ -28,7 +28,7 @@
             <h1 class="text-2xl font-black tracking-tight mb-4">초상권 지킴이 활동지</h1>
             
             <div class="bg-white/15 backdrop-blur-md rounded-xl p-3 flex items-center justify-between border border-white/20">
-                <span class="text-sm font-bold text-indigo-100">학급 번호 / 이름:</span>
+                <span class="text-sm font-bold text-indigo-100">이름:</span>
                 <input type="text" id="student-name" placeholder="이름을 입력하세요" class="bg-white/90 text-slate-900 placeholder-slate-400 font-bold px-3 py-1.5 rounded-lg text-sm w-44 text-center focus:outline-none focus:ring-2 focus:ring-indigo-400">
             </div>
         </header>
@@ -39,12 +39,12 @@
             <!-- Section 1: Portrait Rights Explanation with Image -->
             <section class="space-y-3">
                 <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                    📖 초상권 알아보기
+                    📖 초상권 확인하기
                 </h2>
                 
                 <!-- Main Illustration Image Block -->
                 <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-2 shadow-sm overflow-hidden flex justify-center items-center">
-                    <img src="image01.png" alt="초상권 알아보기 - 사진 찍지 마세요, 지워주세요" class="w-full h-auto rounded-xl object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=%EC%82%AC%EC%A7%84+%EC%B0%8D%EC%A7%80+%EB%A7%88%EC%84%B8%EC%9A%94+%EC%A7%80%EC%9B%8C%EC%A3%BC%EC%84%B8%EC%9A%94';">
+                    <img src="image02.png" alt="초상권 알아보기 - 사진 찍지 마세요, 지워주세요" class="w-full h-auto rounded-xl object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/1e293b?text=%EC%82%AC%EC%A7%84+%EC%B0%8D%EC%A7%80+%EB%A7%88%EC%84%B8%EC%9A%94+%EC%A7%80%EC%9B%8C%EC%A3%BC%EC%84%B8%EC%9A%94';">
                 </div>
 
                 <!-- Callout Box with Blue Accent Border -->
@@ -64,7 +64,7 @@
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                         ✍️ 1. O/X 퀴즈
                     </h2>
-                    <p class="text-slate-500 text-sm mt-0.5">문장을 읽고 알맞은 버튼을 터치해 주세요.</p>
+                    <p class="text-slate-500 text-sm mt-0.5">문장을 읽고 맞으면 O, 틀리면 X를 터치해 주세요.</p>
                 </div>
 
                 <div id="quiz-list" class="space-y-5">
@@ -116,7 +116,7 @@
                     <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
                         📱 2. SNS 사진 선택 활동
                     </h2>
-                    <p class="text-slate-600 text-sm font-semibold mt-0.5">초상권을 잘 지킨 SNS 사진을 선택해주세요</p>
+                    <p class="text-slate-600 text-sm font-semibold mt-0.5">초상권을 잘 지킨 SNS 사진을 2개 선택해 주세요</p>
                 </div>
 
                 <div class="space-y-4" id="sns-container">
@@ -135,7 +135,7 @@
                     <div onclick="toggleSnsCard(this)" data-correct="false" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
                         <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
-                            <img src="image05.jpg" alt="주문하는 친구 사진" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%A3%BC%EB%AC%B8%ED%95%98%EB%8A%94+%EC%B9%9C%EA%B5%AC+%EC%82%AC%EC%A7%84';">
+                            <img src="image05.png" alt="주문하는 친구 사진" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%A3%BC%EB%AC%B8%ED%95%98%EB%8A%94+%EC%B9%9C%EA%B5%AC+%EC%82%AC%EC%A7%84';">
                         </div>
                         <p class="text-xs font-bold text-slate-400">chococookie_</p>
                         <p class="text-sm font-medium text-slate-800 mt-1">"커피 주문하러 가는 친구~ 얼굴이 그대로 다 찍혔다."</p>
@@ -146,7 +146,7 @@
                     <div onclick="toggleSnsCard(this)" data-correct="true" class="sns-card cursor-pointer border-2 border-slate-200 rounded-2xl p-4 bg-white relative shadow-sm hover:border-blue-300">
                         <div class="absolute top-4 right-4 w-9 h-9 rounded-full border-2 border-slate-300 flex items-center justify-center text-sm font-bold text-slate-400 bg-white shadow-sm check-badge z-10">✓</div>
                         <div class="h-72 bg-slate-900 rounded-xl overflow-hidden mb-3 flex items-center justify-center">
-                            <img src="image06.jpg" alt="친구와 찍은 셀카" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%B9%9C%EA%B5%AC%EC%99%80+%EC%B0%8D%EC%9D%80+%EC%85%80%EC%B9%B4';">
+                            <img src="image06.png" alt="친구와 찍은 셀카" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://placehold.co/400x300/1e293b/ffffff?text=%EC%B9%9C%EA%B5%AC%EC%99%80+%EC%B0%8D%EC%9D%80+%EC%85%80%EC%B9%B4';">
                         </div>
                         <p class="text-xs font-bold text-slate-400">chococookie_</p>
                         <p class="text-sm font-medium text-slate-800 mt-1">"해진이랑 같이 찍은 사진! 미리 허락받고 올림."</p>
